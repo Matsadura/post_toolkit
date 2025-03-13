@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 printf "Enter the device's MAC address: "
 read MAC
@@ -6,7 +6,8 @@ echo $MAC
 
 wget -L https://raw.githubusercontent.com/Matsadura/post_toolkit/refs/heads/main/lock.py
 wget -L https://raw.githubusercontent.com/Matsadura/post_toolkit/refs/heads/main/bt_on.bash
-https://raw.githubusercontent.com/Matsadura/post_toolkit/refs/heads/main/bt_off.bash
+wget -L https://raw.githubusercontent.com/Matsadura/post_toolkit/refs/heads/main/bt_off.bash
+wget -L https://raw.githubusercontent.com/Matsadura/post_toolkit/refs/heads/main/python3.desktop
 
 PT='\/home\/$USER\/.local\/bin'
 sed -i "s/MAC_HERE/$MAC/g" bt_on.bash
@@ -25,3 +26,6 @@ cp lock.py /home/$USER/.local/bin/lock
 cp python3.desktop /home/$USER/.config/autostart/
 
 pip3 install pynput >/dev/null 2>&1
+
+echo PATH=$PATH:/home/$USER/.local/bin >> ~/.zshrc
+source ~/.zshrc
