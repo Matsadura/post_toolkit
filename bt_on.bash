@@ -4,7 +4,7 @@ echo "Turning on Bluetooth"
 bluetoothctl power on
 
 echo "Scanning for devices..."
-bluetoothctl scan on >/tmp/bt_on.tmp 2>1 &
+bluetoothctl scan on >/dev/null 2>1 &
 
 PID=$!
 sleep 10
