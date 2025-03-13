@@ -6,7 +6,7 @@ from pynput import keyboard
 def on_lock():
     try:
         subprocess.run(['/usr/local/bin/ft_lock'], check=True)
-        subprocess.run(['/usr/bin/bash', '/home/zzaoui/Documents/bt_off.bash'], check=True)
+        subprocess.run(['/usr/bin/bash', 'PATH_HERE/bt_off.bash'], check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error executing lock command: {e}")
     except FileNotFoundError:
@@ -14,7 +14,7 @@ def on_lock():
 
 def on_logout():
     try:
-        subprocess.run(['/usr/bin/bash', '/home/zzaoui/Documents/bt_off.bash'], check=True)
+        subprocess.run(['/usr/bin/bash', 'PATH_HERE/bt_off.bash'], check=True)
         subprocess.run(['/usr/bin/gnome-session-quit', '--logout', '--no-prompt'], check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error executing logout command: {e}")
