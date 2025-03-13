@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=python3 /home/USER_HERE/.local/bin/lock &
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en]=Lock
+Name=Lock
+Comment[en]=
+Comment=
