@@ -18,6 +18,7 @@ sed -i "s/PATH/$PT/g" lock.py
 chmod +x bt_on.bash bt_off.bash lock.py
 
 mkdir -p /home/$USER/.local/bin
+mkdir -p /home/$USER/.config/autostart
 cp bt_on.bash /home/$USER/.local/bin/bton
 cp bt_off.bash /home/$USER/.local/bin/btoff
 cp lock.py /home/$USER/.local/bin/lock
